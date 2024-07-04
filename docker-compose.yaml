@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  rednetplus:
+    build: .
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./notebooks:/app
+      - ../rednet_plus_env:/app/rednet_plus
+    environment:
+      - PYTHONUNBUFFERED=1
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    runtime: nvidia
+    shm_size: '8g'
+    command: jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token=''
+

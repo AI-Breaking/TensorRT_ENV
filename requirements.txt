@@ -1,0 +1,18 @@
+tensorflow
+pandas
+numpy
+matplotlib
+scikit-learn
+jupyter
+torch
+torchvision
+
+# ReDNetPlus에 필요한 추가 패키지
+tensorboardX
+PyYAML
+opencv-python
+
+# 데과 챌린지
+lightgbm
+tqdm
+mljar-supervised
