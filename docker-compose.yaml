@@ -7,7 +7,8 @@ services:
       - "8888:8888"
     volumes:
       - ./notebooks:/app
-      - ../rednet_plus_env:/app/rednet_plus
+      - ../rednet_plus_env/ReDNetPlus:/app/ReDNetPlus
+      - ../rednet_plus_env/dataset:/app/ReDNetPlus/dataset/Harvey_harvey-feb13-2021-2
     environment:
       - PYTHONUNBUFFERED=1
       - NVIDIA_VISIBLE_DEVICES=all

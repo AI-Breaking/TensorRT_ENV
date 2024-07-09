@@ -1,0 +1,2 @@
+# Ignore ONNX files
+*.onnx

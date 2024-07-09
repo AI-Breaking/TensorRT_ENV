@@ -16,3 +16,6 @@ opencv-python
 lightgbm
 tqdm
 mljar-supervised
+
+# onnx
+onnx
